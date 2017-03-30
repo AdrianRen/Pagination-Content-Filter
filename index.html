@@ -7,6 +7,7 @@
     <title>Students</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/design.css">
+
 </head>
 
 <body>
@@ -16,7 +17,7 @@
             <!-- dynamically insert search form here (optional) -->
 
         </div>
-        <ul class="student-list">
+        <ul class="student-list" id="pagination-demo">
             <li class="student-item cf">
                 <div class="student-details">
                     <img class="avatar" src="https://randomuser.me/api/portraits/thumb/women/67.jpg">
@@ -559,8 +560,21 @@
             </li>
         </ul>
         <!-- dynamically add pagination links here -->
+        <!-- <div id="page-content">
 
+        </div> -->
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="twbs-pagination/twbs-pagination.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    $('#pagination-demo').twbsPagination({
+      totalPages: 35,
+      visiblePages: 5,
+      onPageClick: function (event, page) {
+          $('#page-content').text('Page ' + page);
+      }
+  });
+    </script>
 </body>
 
 </html>
