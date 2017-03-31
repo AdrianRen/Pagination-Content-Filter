@@ -23,3 +23,5 @@
 -   [x] When the "Search" button is clicked, the list of students is filtered to match the search. For example if the name Phillip is typed into the box list all students whose name or email includes Phillip.
 
 -   [x] If no matches are found by the search, include a message in the HTML to tell the user there are no matches.
+
+[Live Demo](http://www.adrianren.com/Pagination-Content-Filter/)
