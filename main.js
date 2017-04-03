@@ -1,3 +1,15 @@
+// Create the search nav by using jQuery
+$(`<div class="page-header cf">
+      <h2>Students</h2>
+      <div class="student-search">
+          <input id="search" name="search" placeholder="Search for students..." type="text" data-list=".student-list">
+          <button>Search</button>
+      </div>
+  </div>`).insertBefore('.student-list');
+// Create the pagination bar by jQuery
+$('.page').append(
+    `<div id="pagination"></div>`
+);
 // simplePagination jQuery Plugin implemented in this section.
 $(function($) {
     let items = $('.student-item');
@@ -27,10 +39,10 @@ $(function($) {
                 .slice(showFrom, showTo).show();
         }
     })
-})
+});
 
 // hideSeek jQuery Plugin implemented in this section.
 $('#search').hideseek({
-  // No matches message
-  nodata:'Holy Smokes! No Result Found!'
+    // No matches message
+    nodata: 'Holy Smokes! No Result Found!'
 });
